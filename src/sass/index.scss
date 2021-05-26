@@ -1,0 +1,76 @@
+.content_wrapper {
+    padding: 1em;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.icon_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 1em;;
+
+    &__icon {
+        text-align: center;
+    }
+
+    &__icon i{
+        font-size: 5em;
+    }
+}
+
+.html5-icon {
+    color: #E34C26;
+}
+
+.css3-icon {
+    color: #264DE4;
+}
+
+.js-icon {
+    color: #F0DB4F;
+}
+
+.section--resources{
+    background: var(--pink);
+    color: white;
+}
+
+.section--tipsntricks{
+    background: var(--orange);
+    color: white;
+}
+
+.section-contact{
+    background: var(--green);
+    color: var(--black);
+}
+
+
+.section_heading {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.content_wrapper {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+.view_btn {
+    background: var(--blue);
+    display: inline-block;
+    padding: .5em 1em;
+    border-radius: 100px;
+    color: var(--white);
+    margin: 1em 0;
+}
+
+.view_btn__link {
+    text-decoration: none;
+    color: var(--white);
+}
