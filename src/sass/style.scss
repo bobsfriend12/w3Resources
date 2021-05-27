@@ -43,6 +43,24 @@ nav {
 		text-decoration: none;
 		border-bottom: 2px solid var(--white);
 
+
+		&:hover {
+			border-width: 4px;
+		}
+
+		&--resources:hover {
+			border-color: var(--pink);
+		}
+
+		&--tipsntricks:hover {
+			border-color: var(--orange);
+		}
+
+		&--contact:hover {
+			border-color: var(--purple);
+		}
+
+
 		&--search{
 			border: none;
 		}
@@ -65,8 +83,6 @@ nav {
 		&--first > * + * {
 			margin-left: 1em;
 		}
-
-		
 }
 
 }
