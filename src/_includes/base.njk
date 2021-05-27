@@ -68,9 +68,9 @@
 					</a>
 				</li>
 				<li class="nav_list__li nav_list__li--first">
-					<a href="/resources" class="nav_list__link nav_list__link--resources">Resources</a>
-					<a href="/tipsNtricks" class="nav_list__link nav_list__link--tipsntricks">tipsNtricks</a>
-					<a href="/contact" class="nav_list__link nav_list__link--contact">Contact</a>
+					<a href="/resources" class="nav_list__link nav_list__link--resources {% if '/resources' in page.url %}nav_list__link--resources--active{% endif %}">Resources</a>
+					<a href="/tipsNtricks" class="nav_list__link nav_list__link--tipsntricks {% if '/tipsNtricks' in page.url %}nav_list__link--tipsntricks--active{% endif %}">tipsNtricks</a>
+					<a href="/contact" class="nav_list__link nav_list__link--contact {% if '/contact' in page.url %}nav_list__link--contact--active{% endif %}">Contact</a>
 					<a href="javascript:void(0)" class="nav_list__link nav_list__link--search"><i class="fas fa-search"></i></a>
 				</li>
 			</ul>

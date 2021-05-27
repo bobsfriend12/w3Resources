@@ -1,0 +1,57 @@
+@use 'includes/vars' as *;
+
+html {
+	scroll-behavior: smooth;
+}
+
+.content_wrapper {
+	max-width: $max_width;
+	margin: auto;
+	display: flex;
+}
+
+.sidebar {
+	margin: 0 1em;
+
+	&__list {
+		margin: 2.5em 0;
+		position: sticky;
+		top: 1em;
+		border: 1px solid var(--black);
+	}
+
+	&__item {
+		margin: 0.5em;
+	}
+
+	&__link {
+		color: var(--black);
+		text-decoration: none;
+		border-bottom: 2px solid var(--pink);
+
+		&:hover {
+			color: var(--pink);
+		}
+	}
+}
+
+.section {
+	&__title {
+		position: sticky;
+		top: 0;
+		background: var(--bg_color);
+		padding-top: 0.5em;
+	}
+
+	&__item {
+		&__link {
+			color: var(--black);
+			text-decoration: none;
+			border-bottom: 2px solid var(--pink);
+
+			&:hover {
+				color: var(--pink);
+			}
+		}
+	}
+}

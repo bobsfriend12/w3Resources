@@ -60,6 +60,18 @@ nav {
 			border-color: var(--purple);
 		}
 
+		&--resources--active {
+			border-bottom: 4px solid var(--pink);
+		}
+
+		&--tipsntricks--active {
+			border-bottom: 4px solid var(--orange);
+		}
+
+		&--contact--active {
+			border-bottom: 4px solid var(--purple);
+		}
+
 
 		&--search{
 			border: none;

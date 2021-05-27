@@ -1,3 +1,5 @@
+@use 'includes/vars' as *;
+
 .content_wrapper {
     padding: 1em;
 }
@@ -37,12 +39,12 @@ svg {
 
 .section--resources{
     background: var(--pink);
-    color: white;
+    color: var(--white);
 }
 
 .section--tipsntricks{
     background: var(--orange);
-    color: white;
+    color: var(--white);
 }
 
 .section-contact{
@@ -58,7 +60,7 @@ svg {
 
 .content_wrapper {
     margin: 0 auto;
-    max-width: 50em;
+    max-width: $max_width;
 }
 
 .view_btn {
