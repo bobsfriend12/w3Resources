@@ -1,9 +1,9 @@
 ---
 layout: blog.njk
-title: Flexbox Simplified
+title: m
 css: style.css
 description: This is a course by Kevin Powell that really dives into flexbox.
-tags: course
+tags: blog
 ---
 
 hello
