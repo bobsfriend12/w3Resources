@@ -113,6 +113,28 @@ footer {
 
 	&__link {
 		color: var(--white);
+		text-decoration: none;
+		border-bottom: 2px solid white;
+
+		&:hover {
+			border-width: 4px;
+		}
+
+		&--home:hover {
+			border-color: var(--blue);
+		}
+
+		&--resources:hover {
+			border-color: var(--pink);
+		}
+
+		&--tipsntricks:hover {
+			border-color: var(--orange);
+		}
+
+		&--contact:hover {
+			border-color: var(--purple);
+		}
 	}
 }
 
