@@ -38,7 +38,7 @@ html {
 .section {
 	&__title {
 		position: sticky;
-		top: 0;
+		top: -1px;
 		background: var(--bg_color);
 		padding-top: 0.5em;
 	}
