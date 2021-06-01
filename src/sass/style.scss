@@ -13,7 +13,6 @@ body {
 	flex-direction: column;
 }
 
-
 @media only screen and (min-width: $breakpoint_mobile) {
 	body {
 		font-size: 1.7em;
@@ -43,7 +42,6 @@ nav {
 		text-decoration: none;
 		border-bottom: 2px solid var(--white);
 
-
 		&:hover {
 			border-width: 4px;
 		}
@@ -60,8 +58,19 @@ nav {
 			border-color: var(--purple);
 		}
 
+		&--resources--active {
+			border-bottom: 4px solid var(--pink);
+		}
 
-		&--search{
+		&--tipsntricks--active {
+			border-bottom: 4px solid var(--orange);
+		}
+
+		&--contact--active {
+			border-bottom: 4px solid var(--purple);
+		}
+
+		&--search {
 			border: none;
 		}
 	}
@@ -83,8 +92,7 @@ nav {
 		&--first > * + * {
 			margin-left: 1em;
 		}
-}
-
+	}
 }
 
 footer {

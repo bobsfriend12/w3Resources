@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: tipsNtricks
+css: tipsntricks.css
+---
+
+<div class="content_wrapper">
+	<aside class="sidebar">
+		<div class="sidebar__contents">
+			<p class="sidebar__title">Tags:</p>
+			<a class="sidebar__item">HTML</a>
+			<a class="sidebar__item">CSS</a>
+			<a class="sidebar__item">JS</a>
+			<a class="sidebar__item">Hosting</a>
+		</div>
+	</aside>
+
+	<main>
+		<h2 class="main__title">tipsNtricks</h2>
+		<div class="masonry">
+			{% for post in collections.post %}
+            <div class="masonry__item">
+                <p class="post__title">{{ post.data.title }}</p>
+                <p class="post__description">{{ post.data.description }}</p>
+                <a class="post__link" href=" {{ post.url }} ">Read More -></a>
+            </div>
+            {% endfor %}
+		</div>
+	</main>
+</div>

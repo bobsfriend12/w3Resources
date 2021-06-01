@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }} | w3Resources</title>
+		<link rel="stylesheet" href="/css/syntax-highlighting.css" />
 		<link rel="stylesheet" href="{{ '/css/resets.css' | url }}" />
 		<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 		<link rel="stylesheet" href=" /css/{{ css }}" />
@@ -68,9 +69,9 @@
 					</a>
 				</li>
 				<li class="nav_list__li nav_list__li--first">
-					<a href="/resources" class="nav_list__link nav_list__link--resources">Resources</a>
-					<a href="/tipsNtricks" class="nav_list__link nav_list__link--tipsntricks">tipsNtricks</a>
-					<a href="/contact" class="nav_list__link nav_list__link--contact">Contact</a>
+					<a href="/resources" class="nav_list__link nav_list__link--resources {% if '/resources/' in page.url %}nav_list__link--resources--active{% endif %}">Resources</a>
+					<a href="/tipsNtricks" class="nav_list__link nav_list__link--tipsntricks {% if '/tipsNtricks/' in page.url %}nav_list__link--tipsntricks--active{% endif %}">tipsNtricks</a>
+					<a href="/contact" class="nav_list__link nav_list__link--contact {% if '/contact/' in page.url %}nav_list__link--contact--active{% endif %}">Contact</a>
 					<a href="javascript:void(0)" class="nav_list__link nav_list__link--search"><i class="fas fa-search"></i></a>
 				</li>
 			</ul>
@@ -102,7 +103,7 @@
 			<div class="legal">
 				<p class="license">Licensed under the MIT license</p>
 				<p class="copyright">
-					&copy; 2021 w3Resources All Rights Reserved
+					&copy; 2021 bobsfriend12 <span class="rights">All Rights Reserved</span>
 				</p>
 			</div>
 		</footer>
