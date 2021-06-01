@@ -1,5 +1,5 @@
 {
-	"layout": "blog.njk",
-	"css": "blog.css",
+	"layout": "post.njk",
+	"css": "post.css",
 	"tags": "post"
 }
