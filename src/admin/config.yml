@@ -1,12 +1,12 @@
 backend:
     name: git-gateway
     branch: main
-media_folder: "/src/img/uploads"
-public_folder: "/public/img/uploads"
+media_folder: "/public/img/uploads"
+public_folder: "/img/uploads"
 collections:
     - name: "resources"
       label: "Resources"
-      folder: "/resources"
+      folder: "/src/resources"
       slug: "{{slug}}"
       create: true
       fields:
@@ -27,7 +27,7 @@ collections:
                 name: "title",
                 widget: "string",
                 required: true,
-                defualt: "New Post"
+                default: "New Post"
             }
           - {
                 label: "Description",
@@ -47,4 +47,4 @@ site_url: https://w3Resources.ga
 display_url: https://w3Resources.ga
 logo_url: https://i.imgur.com/qPntHM6.png
 
-local_backend: false
+local_backend: true
