@@ -1,6 +1,9 @@
 module.exports = function (eleventyConfig) {
 	//make sass work
 	eleventyConfig.addWatchTarget("./src/sass/");
+	eleventyConfig.addWatchTarget("./src/admin/");
+
+	eleventyConfig.setTemplateFormats(["md", "njk", "html"]);
 
 	//add a filter to sort alphabetically in nunjucks
 
@@ -15,6 +18,12 @@ module.exports = function (eleventyConfig) {
 	const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 	eleventyConfig.addPlugin(syntaxHighlight);
+
+	// Copy Static Files to /_Site
+	eleventyConfig.addPassthroughCopy({
+		"./src/admin/config.yml": "./admin/config.yml",
+		"./src/img": "./img"
+	});
 
 	return {
 		dir: {

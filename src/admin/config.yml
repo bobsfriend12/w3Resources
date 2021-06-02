@@ -1,0 +1,82 @@
+backend:
+    name: git-gateway
+    branch: main
+media_folder: "/public/img/uploads"
+public_folder: "/img/uploads"
+site_url: https://w3Resources.ga
+display_url: https://w3Resources.ga
+logo_url: https://i.imgur.com/qPntHM6.png
+
+local_backend: true
+collections:
+    - name: "resources"
+      label: "Resources"
+      folder: "/src/resources"
+      slug: "{{slug}}"
+      create: true
+      fields:
+          - {
+                label: "Layout",
+                name: "layout",
+                widget: "hidden",
+                default: "resource.njk"
+            }
+          - {
+                label: "CSS",
+                name: "css",
+                widget: "hidden",
+                default: "resource.css"
+            }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - {
+                label: "Description",
+                name: "description",
+                widget: "string",
+                required: true
+            }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+          - {
+                label: "Tags",
+                name: "tags",
+                widget: "select",
+                multiple: false,
+                options: ["course", "ytchannel", "blog"],
+                required: true
+            }
+    - name: "tipsNtricks"
+      label: "tipsNtricks"
+      folder: "/src/tipsNtricks/posts"
+      slug: "{{slug}}"
+      create: true
+      fields:
+          - {
+                label: "Layout",
+                name: "layout",
+                widget: "hidden",
+                required: true,
+                default: "post.njk"
+            }
+          - {
+                label: "CSS",
+                name: "css",
+                widget: "hidden",
+                required: true,
+                default: "post.css"
+            }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - {
+                label: "Description",
+                name: "description",
+                widget: "string",
+                required: true
+            }
+          - { label: "Body", name: "body", widget: "markdown", required: true }
+          - {
+                label: "Tags",
+                name: "tags",
+                widget: "select",
+                multiple: true,
+                options: ["HTML", "CSS", "JS", "HOSTING", "post"],
+                required: true,
+                default: ["post"]
+            }
