@@ -1,0 +1,46 @@
+backend:
+    name: git-gateway
+    branch: main
+media_folder: "/src/img/uploads"
+public_folder: "img/uploads"
+collections:
+    - name: "resources"
+      label: "Resources"
+      folder: "/resources"
+      slug: "{{slug}}"
+      fields:
+          - {
+                label: "Layout",
+                name: "layout",
+                widget: "hidden",
+                default: "resource.njk"
+            }
+          - {
+                label: "CSS",
+                name: "css",
+                widget: "hidden",
+                default: "resource.css"
+            }
+          - { label: "Title", name: "title", widget: "string", required: true,
+          defualt: "New Post" }
+          - {
+                label: "Description",
+                name: "description",
+                widget: "string",
+                default: "Lorem ipsum dolor sit amet"
+            }
+          - {
+                label: "Tags",
+                name: "tags",
+                widget: "select",
+                multiple: "true",
+                options: ["HTML", "CSS", "JS", "sat"],
+                default: "HTML"
+            }
+site_url: https://w3Resources.ga
+display_url: https://w3Resources.ga
+logo_url: https://your-site.com/imagesimg/regular.svg
+
+local_backend: true
+
+
