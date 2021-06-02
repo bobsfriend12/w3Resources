@@ -76,6 +76,15 @@
 					<a href="javascript:void(0)" class="nav_list__link nav_list__link--search"><i class="fas fa-search"></i></a>
 				</li>
 			</ul>
+			<input type="checkbox" class="mobile_nav__toggle" id="mobile_nav__toggle">
+			<label for="mobile_nav__toggle" class="mobile_nav__label"><span></span></label>
+
+			<div class="mobile_nav">
+				<a href="/resources" class="mobile_nav__link mobile_nav__link--resources {% if '/resources/' in page.url %}mobile_nav__link--resources--active{% endif %}">Resources</a>
+				<a href="/tipsNtricks" class="mobile_nav__link mobile_nav__link--tipsntricks {% if '/tipsNtricks/' in page.url %}mobile_nav__link--tipsntricks--active{% endif %}">tipsNtricks</a>
+				<a href="/contact" class="mobile_nav__link mobile_nav__link--contact {% if '/contact/' in page.url %}mobile_nav__link--contact--active{% endif %}">Contact</a>
+				<a href="javascript:void(0)" class="mobile_nav__link mobile_nav__link--search"><i class="fas fa-search"></i></a>
+			</div>
 		</nav>
 		{{content | safe}}
 

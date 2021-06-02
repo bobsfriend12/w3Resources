@@ -3,7 +3,14 @@
 .content_wrapper {
 	max-width: $max_width;
 	margin: 1em auto;
+	padding: 1em;
 	display: flex;
+}
+
+@media only screen and (max-width: $breakpoint_tablet) {
+	.content_wrapper {
+		flex-direction: column;
+	}
 }
 
 aside {
@@ -48,6 +55,18 @@ main {
 		border-radius: 10px;
 		margin-bottom: 0.5em;
 		padding: 0.5em;
+	}
+}
+
+@media only screen and (max-width: $breakpoint_tablet) {
+	.masonry {
+		column-count: 2;
+	}
+}
+
+@media only screen and (max-width: $breakpoint_mobile) {
+	.masonry {
+		column-count: 1;
 	}
 }
 

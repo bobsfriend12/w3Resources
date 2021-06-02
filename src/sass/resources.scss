@@ -10,6 +10,12 @@ html {
 	display: flex;
 }
 
+@media only screen and (max-width: $breakpoint_mobile) {
+	.content_wrapper {
+		flex-direction: column;
+	}
+}
+
 .sidebar {
 	margin: 0 1em;
 

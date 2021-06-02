@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(syntaxHighlight);
 
-	// Copy Static Files to /_Site
+	// Copy Static Files to /public
 	eleventyConfig.addPassthroughCopy({
 		"./src/admin/config.yml": "./admin/config.yml",
 		"./src/admin/config.yml": "./config.yml",
