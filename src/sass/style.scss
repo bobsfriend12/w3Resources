@@ -30,7 +30,7 @@ nav {
 	display: flex;
 	max-height: 3.15em;
 	position: relative;
-	width: 100vw;
+	width: 100%;
 }
 
 .nav_list {
@@ -283,4 +283,9 @@ footer {
 .legal {
 	padding: 1em 0;
 	color: var(--white);
+
+	&__link {
+		text-decoration: underline;
+		color: white;
+	}
 }
