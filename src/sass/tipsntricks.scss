@@ -27,10 +27,15 @@ aside {
 		border: 1px solid var(--black);
 		padding: 0.5em;
 		overflow: hidden;
+		color: var(--black);
+	}
+
+	&__title {
+		color: var(--black);
 	}
 
 	&__item {
-		background: var(bg_color);
+		background: var(--bg_color);
 		display: inline;
 		padding: 0 0.5em;
 		border: 1px solid var(--black);
@@ -41,6 +46,10 @@ aside {
 
 main {
 	flex: 1 0 75%;
+}
+
+.main__title {
+	color: var(--black);
 }
 
 .masonry {
@@ -73,10 +82,12 @@ main {
 .post {
 	&__title {
 		font-weight: 700;
+		color: var(--black);
 	}
 
 	&__description {
-		color: rgb(37, 37, 37);
+		// color: rgb(37, 37, 37);
+		color: var(--secondary_text);
 	}
 
 	&__link {

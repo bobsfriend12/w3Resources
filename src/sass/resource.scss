@@ -4,6 +4,8 @@
 	width: 100%;
 	max-width: $max_width;
 	margin: 1em auto;
+	color: var(--black);
+	padding: 1em;
 }
 main {
 	p {
@@ -11,13 +13,13 @@ main {
 	}
 
 	a {
-		color: black;
+		color: var(--black);
 		text-decoration: none;
 		border-bottom: 2px solid var(--pink);
 	}
 
 	blockquote {
-		background: #f9f9f9;
+		background: var(--bg_color);
 		border-left: 10px solid #ccc;
 		margin: 1.5em 10px;
 		padding: 0.5em 10px;
