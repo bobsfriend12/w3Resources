@@ -7,7 +7,7 @@ site_url: https://w3Resources.ga
 display_url: https://w3Resources.ga
 logo_url: https://i.imgur.com/qPntHM6.png
 
-local_backend: true
+local_backend: false
 collections:
     - name: "resources"
       label: "Resources"
