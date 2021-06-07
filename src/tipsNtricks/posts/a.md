@@ -1,7 +1,9 @@
 ---
 title: Flexbox Simplified
 description: This is a course by Kevin Powell that really dives into flexbox.
-tags: course
+author: bobsfriend12
+tags:
+  - course
 ---
 
 hello
