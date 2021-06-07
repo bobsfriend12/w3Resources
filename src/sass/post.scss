@@ -45,3 +45,15 @@ main {
 		width: 100%;
 	}
 }
+
+.post_details {
+	display: flex;
+	gap: 1em;
+	color: var(--secondary_text);
+
+	p {
+		i {
+			margin-right: 0.5em;
+		}
+	}
+}

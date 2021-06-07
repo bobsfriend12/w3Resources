@@ -8,6 +8,11 @@
 
 h3 {
 	margin: 1em 0;
+	color: var(--black);
+}
+
+.main__title {
+	color: var(--black);
 }
 
 .discord {
@@ -24,13 +29,13 @@ h3 {
 
 .contribute {
 	&__text {
-		color: rgb(37, 37, 37);
+		color: var(--text_color);
 	}
 }
 
 .email {
 	&__text {
-		color: var(text_color);
+		color: var(--text_color);
 	}
 
 	&__link {

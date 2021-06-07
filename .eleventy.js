@@ -26,6 +26,14 @@ module.exports = function (eleventyConfig) {
 		"./src/img": "./img"
 	});
 
+	// Add DateTime filter to get rid of time in {{ page.date }}
+
+	const { DateTime } = require("luxon");
+
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	});
+
 	return {
 		dir: {
 			input: "src",

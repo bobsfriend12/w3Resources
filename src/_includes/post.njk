@@ -2,6 +2,14 @@
 layout: base.njk
 ---
 <div class="content_wrapper">
+    <header>
+    <h1 class="header__title">{{ title | safe}}</h1>
+    <div class="post_details">
+        <p class="header__author"><i class="fas fa-user-circle"></i>{{author | safe}}</p>
+        <p class="header__date"><i class="fas fa-calendar-day"></i> {{page.date | postDate}} </p>
+    </div>
+    </header>
+
     <main>
         {{ content | safe }}
     </main>

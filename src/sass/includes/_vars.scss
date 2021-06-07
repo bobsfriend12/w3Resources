@@ -12,4 +12,20 @@ $max_width: 60em;
 	--bg_color: #f9f9f9;
 	--black: black;
 	--text_color: hsl(0, 0%, 15%);
+	--secondary_text: rgb(58, 58, 58);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--gray: #34312d;
+		--blue: #3aafb9;
+		--pink: #db2763;
+		--orange: #ff8600;
+		--purple: #6969b3;
+		--white: rgb(0, 0, 0);
+		--bg_color: #181818;
+		--black: rgb(255, 255, 255);
+		--text_color: hsl(0, 0%, 85%);
+		--secondary_text: rgb(211, 211, 211);
+	}
 }
