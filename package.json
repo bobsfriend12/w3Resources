@@ -11,7 +11,7 @@
 		"postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
 		"start": "npm-run-all build:sass --parallel watch:*",
 		"build": "npm-run-all build:sass build:eleventy",
-		"netlifycms": "cd public && npx netlify-cms-proxy-server"
+		"netlifycms": "npx netlify-cms-proxy-server"
 	},
 	"repository": {
 		"type": "git",

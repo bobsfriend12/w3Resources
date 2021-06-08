@@ -70,6 +70,13 @@ collections:
                 widget: "string",
                 required: true
             }
+          - {
+                label: "Author",
+                name: "author",
+                widget: "string",
+                default: "bobsfriend12",
+                required: true
+            }
           - { label: "Body", name: "body", widget: "markdown", required: true }
           - {
                 label: "Tags",
