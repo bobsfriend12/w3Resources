@@ -25,8 +25,10 @@ module.exports = function (eleventyConfig) {
 		"./src/img": "./img"
 	});
 
+
 	eleventyConfig.addPassthroughCopy("./src/admin/config.yml");
 	eleventyConfig.addPassthroughCopy("./src/admin");
+
 
 	// Add DateTime filter to get rid of time in {{ page.date }}
 
