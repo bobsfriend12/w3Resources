@@ -1,5 +1,9 @@
 @use 'includes/vars' as *;
 
+::marker {
+	color: var(--black);
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -47,17 +51,20 @@ html {
 		top: -1px;
 		background: var(--bg_color);
 		padding-top: 0.5em;
+		color: var(--black);
+	}
+
+	&__item::marker {
+		color: var(--black);
 	}
 
 	&__item {
+		color: var(--secondary_text);
+
 		&__link {
 			color: var(--black);
 			text-decoration: none;
 			border-bottom: 2px solid var(--pink);
-
-			&:hover {
-				color: var(--pink);
-			}
 		}
 	}
 }

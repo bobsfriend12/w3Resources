@@ -21,9 +21,18 @@ module.exports = function (eleventyConfig) {
 
 	// Copy Static Files to /public
 	eleventyConfig.addPassthroughCopy({
-		"./src/admin/config.yml": "./admin/config.yml",
 		"./src/admin/config.yml": "./config.yml",
 		"./src/img": "./img"
+	});
+
+	eleventyConfig.addPassthroughCopy("./src/admin");
+
+	// Add DateTime filter to get rid of time in {{ page.date }}
+
+	const { DateTime } = require("luxon");
+
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
 
 	return {

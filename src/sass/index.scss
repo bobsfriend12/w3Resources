@@ -1,78 +1,97 @@
 @use 'includes/vars' as *;
 
 .content_wrapper {
-    padding: 1em;
+	padding: 1em;
 }
 
 svg {
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+	.svg__text {
+		path {
+			fill: white;
+		}
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.svg__text {
+		path {
+			fill: black;
+		}
+	}
 }
 
 .icon_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 1em;;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 1em;
 
-    &__icon {
-        text-align: center;
-    }
+	&__icon {
+		text-align: center;
+	}
 
-    &__icon i{
-        font-size: 5em;
-    }
+	&__icon i {
+		font-size: 5em;
+	}
+}
+
+.tagline {
+	color: var(--black);
 }
 
 .html5-icon {
-    color: #E34C26;
+	color: #e34c26;
 }
 
 .css3-icon {
-    color: #264DE4;
+	color: #264de4;
 }
 
 .js-icon {
-    color: #F0DB4F;
+	color: #f0db4f;
 }
 
-.section--resources{
-    background: var(--pink);
-    color: var(--white);
+.section--resources {
+	background: var(--pink);
+	color: var(--white);
 }
 
-.section--tipsntricks{
-    background: var(--orange);
-    color: var(--white);
+.section--tipsntricks {
+	background: var(--orange);
+	color: var(--white);
 }
 
-.section-contact{
-    background: var(--purple);
-    color: var(--white);
+.section-contact {
+	background: var(--purple);
+	color: var(--white);
 }
-
 
 .section_heading {
-    text-align: center;
-    margin-bottom: .5em;
+	text-align: center;
+	margin-bottom: 0.5em;
 }
 
 .content_wrapper {
-    margin: 0 auto;
-    max-width: $max_width;
+	margin: 0 auto;
+	max-width: $max_width;
 }
 
 .view_btn {
-    background: var(--blue);
-    display: inline-block;
-    padding: .5em 1em;
-    border-radius: 100px;
-    color: var(--white);
-    margin: 1em 0;
+	background: var(--blue);
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: 100px;
+	color: var(--white);
+	margin: 1em 0;
 }
 
 .view_btn__link {
-    text-decoration: none;
-    color: var(--white);
+	text-decoration: none;
+	color: var(--white);
 }

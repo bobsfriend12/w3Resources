@@ -4,6 +4,8 @@
 	width: 100%;
 	max-width: $max_width;
 	margin: 1em auto;
+	color: var(--black);
+	padding: 1em;
 }
 main {
 	p {
@@ -11,13 +13,13 @@ main {
 	}
 
 	a {
-		color: black;
+		color: var(--black);
 		text-decoration: none;
 		border-bottom: 2px solid var(--orange);
 	}
 
 	blockquote {
-		background: #f9f9f9;
+		background: var(--bg_color);
 		border-left: 10px solid #ccc;
 		margin: 1.5em 10px;
 		padding: 0.5em 10px;
@@ -43,5 +45,26 @@ main {
 		border: 1px solid transparent;
 		border-radius: 3px;
 		width: 100%;
+	}
+}
+
+.post_details {
+	display: flex;
+	gap: 1em;
+	color: var(--secondary_text);
+
+	p {
+		svg {
+			-webkit-font-smoothing: antialiased;
+			display: inline-block !important;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			margin-right: 0.5em;
+		}
+		i {
+			margin-right: 0.5em;
+		}
 	}
 }
