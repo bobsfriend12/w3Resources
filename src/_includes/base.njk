@@ -19,7 +19,8 @@
 		></script>
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-		{# <script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-23L23K8FDZ"></script>
+		<script>
 			const cyrb53 = function(str, seed = 0) {
 			let h1 = 0xdeadbeef ^ seed,
 				h2 = 0x41c6ce57 ^ seed;
@@ -45,20 +46,12 @@
 
 			ga('create', 'G-23L23K8FDZ', {
 			'storage': 'none',
-			'clientId': clientIDHashed,
-			"cookie_domain": "none"
+			'clientId': clientIDHashed
 			});
 			ga('set', 'anonymizeIp', true);
 			ga('send', 'pageview');
-		</script> #}
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-23L23K8FDZ"></script>
-		<script>
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-
-				gtag('config', 'G-23L23K8FDZ');
 		</script>
+		
 	</head>
 	<body>
 		<nav>
