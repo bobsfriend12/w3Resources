@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	eleventyConfig.addPassthroughCopy("./src/admin");
+	eleventyConfig.addPassthroughCopy("./src/js");
 
 	// Add DateTime filter to get rid of time in {{ page.date }}
 

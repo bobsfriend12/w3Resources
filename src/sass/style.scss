@@ -1,27 +1,63 @@
 @use 'includes/vars' as *;
 
+:root {
+	--gray: #34312d;
+	--blue: #3aafb9;
+	--pink: #db2763;
+	--orange: #ff8600;
+	--purple: #6969b3;
+	--white: white;
+	--bg_color: #f9f9f9;
+	--black: black;
+	--text_color: hsl(0, 0%, 15%);
+	--secondary_text: rgb(58, 58, 58);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--gray: #34312d;
+		--blue: #3aafb9;
+		--pink: #db2763;
+		--orange: #ff8600;
+		--purple: #6969b3;
+		--white: rgb(0, 0, 0);
+		--bg_color: #181818;
+		--black: rgb(255, 255, 255);
+		--text_color: hsl(0, 0%, 85%);
+		--secondary_text: rgb(211, 211, 211);
+	}
+}
+
 html {
 	font-family: sans-serif;
 	font-size: 62.5%;
 }
 
 body {
-	background-color: var(--bg_color);
 	font-size: 1.5em;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.main_wrapper {
+	background-color: var(--bg_color);
+	font-size: 1.5rem;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 
 @media only screen and (min-width: $breakpoint_mobile) {
-	body {
-		font-size: 1.7em;
+	.main_wrapper {
+		font-size: 1.7rem;
 	}
 }
 
 @media only screen and (min-width: $breakpoint_tablet) {
-	body {
-		font-size: 2.2em;
+	.main_wrapper {
+		font-size: 2.2rem;
 	}
 }
 
@@ -229,6 +265,7 @@ footer {
 	background: var(--gray);
 	text-align: center;
 	margin-top: auto;
+	position: relative;
 }
 
 .footer_list {
@@ -288,4 +325,67 @@ footer {
 		text-decoration: underline;
 		color: white;
 	}
+}
+
+.mode_toggle {
+	display: block;
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	color: white;
+	cursor: pointer;
+	z-index: 10;
+
+	label {
+		cursor: pointer;
+	}
+
+	&__check {
+		position: absolute;
+		left: -999999px;
+		bottom: 0;
+	}
+}
+
+.mode_toggle__check:checked ~ .main_wrapper {
+	--gray: #34312d;
+	--blue: #3aafb9;
+	--pink: #db2763;
+	--orange: #ff8600;
+	--purple: #6969b3;
+	--white: rgb(0, 0, 0);
+	--bg_color: #181818;
+	--black: rgb(255, 255, 255);
+	--text_color: hsl(0, 0%, 85%);
+	--secondary_text: rgb(211, 211, 211);
+}
+
+// For when I have it automatically checked when you have dark mode on
+// .mode_toggle__check:not(:checked) ~ .main_wrapper {
+// 	--gray: #34312d;
+// 	--blue: #3aafb9;
+// 	--pink: #db2763;
+// 	--orange: #ff8600;
+// 	--purple: #6969b3;
+// 	--white: white;
+// 	--bg_color: #f9f9f9;
+// 	--black: black;
+// 	--text_color: hsl(0, 0%, 15%);
+// 	--secondary_text: rgb(58, 58, 58);
+// }
+
+.mode_toggle__check:checked ~ .mode_toggle .far.dark_mode {
+	display: inline-block;
+}
+
+.mode_toggle__check:checked ~ .mode_toggle .far.light_mode {
+	display: none;
+}
+
+.mode_toggle__check:not(:checked) ~ .mode_toggle .far.light_mode {
+	display: inline-block;
+}
+
+.mode_toggle__check:not(:checked) ~ .mode_toggle .far.dark_mode {
+	display: none;
 }

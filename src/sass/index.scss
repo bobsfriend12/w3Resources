@@ -27,6 +27,10 @@ svg {
 	}
 }
 
+.mode_toggle__check:checked ~ .main_wrapper .svg__text path {
+	fill: white;
+}
+
 .icon_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -59,17 +63,17 @@ svg {
 
 .section--resources {
 	background: var(--pink);
-	color: var(--white);
+	color: white;
 }
 
 .section--tipsntricks {
 	background: var(--orange);
-	color: var(--white);
+	color: white;
 }
 
 .section-contact {
 	background: var(--purple);
-	color: var(--white);
+	color: white;
 }
 
 .section_heading {
@@ -93,5 +97,5 @@ svg {
 
 .view_btn__link {
 	text-decoration: none;
-	color: var(--white);
+	color: white;
 }
