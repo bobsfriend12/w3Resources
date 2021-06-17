@@ -11,21 +11,27 @@ svg {
 	margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-	.svg__text {
-		path {
-			fill: white;
-		}
+.svg__text {
+	path {
+		fill: black;
 	}
 }
 
-@media (prefers-color-scheme: light) {
-	.svg__text {
-		path {
-			fill: black;
-		}
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	.svg__text {
+// 		path {
+// 			fill: white;
+// 		}
+// 	}
+// }
+
+// @media (prefers-color-scheme: light) {
+// 	.svg__text {
+// 		path {
+// 			fill: black;
+// 		}
+// 	}
+// }
 
 .mode_toggle__check:checked ~ .main_wrapper .svg__text path {
 	fill: white;
