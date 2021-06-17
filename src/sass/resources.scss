@@ -10,7 +10,8 @@ html {
 
 .content_wrapper {
 	max-width: $max_width;
-	margin: auto;
+	margin: 0 auto;
+	padding: 0 1em;
 	display: flex;
 }
 

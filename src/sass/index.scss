@@ -17,22 +17,6 @@ svg {
 	}
 }
 
-// @media (prefers-color-scheme: dark) {
-// 	.svg__text {
-// 		path {
-// 			fill: white;
-// 		}
-// 	}
-// }
-
-// @media (prefers-color-scheme: light) {
-// 	.svg__text {
-// 		path {
-// 			fill: black;
-// 		}
-// 	}
-// }
-
 .mode_toggle__check:checked ~ .main_wrapper .svg__text path {
 	fill: white;
 }
@@ -53,6 +37,9 @@ svg {
 
 .tagline {
 	color: var(--black);
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.5em;
 }
 
 .html5-icon {
