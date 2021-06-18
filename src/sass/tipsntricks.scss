@@ -62,7 +62,7 @@ main {
 
 		border: 1px solid var(--black);
 		border-radius: 10px;
-		margin-bottom: 0.5em;
+		margin-bottom: 1em;
 		padding: 0.5em;
 	}
 }
@@ -86,7 +86,6 @@ main {
 	}
 
 	&__description {
-		// color: rgb(37, 37, 37);
 		color: var(--secondary_text);
 	}
 
@@ -95,4 +94,27 @@ main {
 		text-decoration: none;
 		border-bottom: 2px solid var(--orange);
 	}
+}
+
+.pagination_list {
+	list-style-type: none;
+	display: flex;
+	gap: 0.5em;
+	margin: 0;
+	padding: 0;
+}
+
+.pagination_item {
+	list-style-type: none;
+
+	a {
+		color: var(--black);
+		text-decoration: none;
+	}
+}
+
+[aria-current] {
+	background: var(--orange);
+	border: 1px solid transparent;
+	border-radius: 50%;
 }

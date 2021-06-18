@@ -8,7 +8,3 @@ tags:
   - HTML
 ---
 yay! it workds
-
-yay! it workds
-
-also its the 6th

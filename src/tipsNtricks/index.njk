@@ -2,6 +2,11 @@
 layout: base.njk
 title: tipsNtricks
 css: tipsntricks.css
+
+pagination:
+    data: collections.post
+    size: 9
+    alias: posts
 ---
 
 <div class="content_wrapper">
@@ -19,7 +24,7 @@ css: tipsntricks.css
 	<main>
 		<h2 class="main__title">Posts</h2>
 		<div class="masonry">
-			{% for post in collections.post %}
+			{% for post in posts %}
             <div class="masonry__item">
                 <p class="post__title">{{ post.data.title }}</p>
                 <p class="post__description">{{ post.data.description }}</p>
@@ -27,5 +32,20 @@ css: tipsntricks.css
             </div>
             {% endfor %}
 		</div>
+
+        <ol class="pagination_list">
+                <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+                <li class="pagination_item" {% if page.url == pagination.href.first %} aria-current="page"{% endif %}><a href="{{ pagination.href.first }}" class="first">1</a></li>
+            {%- for pageEntry in pagination.pages %}
+                {%- if loop.index0 == pagination.pages.length - 1 or loop.index0 == 0%}
+                    {% else %}
+                    <li class="pagination_item" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+                {%- endif %}
+            {%- endfor %}
+                <li class="pagination_item" {% if page.url == pagination.href.last %} aria-current="page"{% endif %}><a href="{{ pagination.href.last }}">{{ pagination.pages.length }}</a></li>
+                <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+        </ol>
 	</main>
 </div>
+
+<script src="/js/pagination.js"></script>
