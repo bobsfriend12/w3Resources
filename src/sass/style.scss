@@ -1,6 +1,8 @@
 @use 'includes/vars' as *;
 
-:root {
+:root,
+*::before,
+*::after {
 	--gray: #34312d;
 	--blue: #3aafb9;
 	--pink: #db2763;
@@ -12,21 +14,6 @@
 	--text_color: hsl(0, 0%, 15%);
 	--secondary_text: rgb(58, 58, 58);
 }
-
-// @media (prefers-color-scheme: dark) {
-// 	:root {
-// 		--gray: #34312d;
-// 		--blue: #3aafb9;
-// 		--pink: #db2763;
-// 		--orange: #ff8600;
-// 		--purple: #6969b3;
-// 		--white: rgb(0, 0, 0);
-// 		--bg_color: #181818;
-// 		--black: rgb(255, 255, 255);
-// 		--text_color: hsl(0, 0%, 85%);
-// 		--secondary_text: rgb(211, 211, 211);
-// 	}
-// }
 
 html {
 	font-family: sans-serif;
@@ -341,11 +328,6 @@ footer {
 }
 
 .mode_toggle__check:checked ~ .main_wrapper {
-	--gray: #34312d;
-	--blue: #3aafb9;
-	--pink: #db2763;
-	--orange: #ff8600;
-	--purple: #6969b3;
 	--white: rgb(0, 0, 0);
 	--bg_color: #181818;
 	--black: rgb(255, 255, 255);
@@ -355,11 +337,6 @@ footer {
 
 // For when I have it automatically checked when you have dark mode on
 .mode_toggle__check:not(:checked) ~ .main_wrapper {
-	--gray: #34312d;
-	--blue: #3aafb9;
-	--pink: #db2763;
-	--orange: #ff8600;
-	--purple: #6969b3;
 	--white: white;
 	--bg_color: #f9f9f9;
 	--black: black;

@@ -1,10 +1,10 @@
 ---
 layout: base.njk
-title: tipsNtricks
+title: JS Posts
 css: tipsntricks.css
 
 pagination:
-    data: collections.post
+    data: collections.js
     size: 9
     alias: posts
 ---
@@ -22,40 +22,33 @@ pagination:
 	</aside>
 
 	<main>
-		<h2 class="main__title">Posts</h2>
+		<h2 class="main__title">JS Posts</h2>
 		<div class="masonry">
 			{% for post in posts %}
-                <div class="masonry__item">
-                    <p class="post__title">{{ post.data.title }}</p>
-                    <p class="post__description">{{ post.data.description }}</p>
-                    <a class="post__link" href=" {{ post.url }} ">Read More <i class="fas fa-arrow-right"></i></a>
-                    {% if post.data.tags|ifempty %}
-                        <div class="post__tags">
-                            {% for tag in post.data.tags %}
-                                {% if tag != "post" %}
-                                    <a class="post__tag" href="/tipsNtricks/tags/{{ tag }}">{{tag}}</a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-
-                </div>
+            <div class="masonry__item">
+                <p class="post__title">{{ post.data.title }}</p>
+                <p class="post__description">{{ post.data.description }}</p>
+                <a class="post__link" href=" {{ post.url }} ">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
             {% endfor %}
 		</div>
-        {% if pagination.pages.length > 1 %}
-            <ol class="pagination_list">
+
+ {% if pagination.pages.length > 1 %}
+
+        <ol class="pagination_list">
                 <li class="pagination_prev pagination_bypage">{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}"><i class="fas fa-chevron-left"></i> Previous </a>{% else %} <i class="fas fa-chevron-left"></i> Previous{% endif %}</li>
                 <li class="pagination_item" {% if page.url == pagination.href.first %} aria-current="page"{% endif %}><a href="{{ pagination.href.first }}" class="first">1</a></li>
-                {%- for pageEntry in pagination.pages %}
-                    {%- if loop.index0 == pagination.pages.length - 1 or loop.index0 == 0%}
-                        {% else %}
-                        <li class="pagination_item" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
-                    {%- endif %}
-                {%- endfor %}
+            {%- for pageEntry in pagination.pages %}
+                {%- if loop.index0 == pagination.pages.length - 1 or loop.index0 == 0%}
+                    {% else %}
+                    <li class="pagination_item" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}><a href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a></li>
+                {%- endif %}
+            {%- endfor %}
                 <li class="pagination_item" {% if page.url == pagination.href.last %} aria-current="page"{% endif %}><a href="{{ pagination.href.last }}">{{ pagination.pages.length }}</a></li>
                 <li class="pagination_next pagination_bypage">{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next <i class="fas fa-chevron-right"></i></a>{% else %}Next <i class="fas fa-chevron-right"></i>{% endif %}</li>
-            </ol>
-        {% endif %}
+        </ol>
+
+    {% endif %}
 	</main>
 </div>
 
