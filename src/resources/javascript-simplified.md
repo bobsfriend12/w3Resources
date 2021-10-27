@@ -1,8 +1,8 @@
 ---
-layout: resource.njk
-css: resource.css
-title: javascript Simplified
-description: This is a course by web dev simplified about javascript's ins and outs
-tags:
-  - course
+title: Javascript Simplified
+description: A course by Kyle Cook that teaches you everything you need to know to write good javascript.
+tags: courses
 ---
+<a href="https://javascriptsimplified.com" target="blank">javascriptsimplified.com</a>
+
+copy paste from site
