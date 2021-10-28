@@ -12,7 +12,16 @@ module.exports = function (eleventyConfig) {
 			.slice()
 			.sort((a, b) => a.data.title.localeCompare(b.data.title));
 	}
+	function ifEmpty(array) {
+		if(array.length > 1) {
+			return true;
+		}
+
+		return false;
+	}
+
 	eleventyConfig.addFilter("alpha", sortAlpha);
+	eleventyConfig.addFilter("ifempty", ifEmpty);
 
 	//syntax highlighting
 	const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");

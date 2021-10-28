@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{% if description %}
+			<meta name="description" content="{{ description | safe }}">
+		{% else %}
+			<meta name="description" content="Find all sorts of resources to help you along your web dev journey">
+		{% endif %}
 		<title>{{ title }} | w3Resources</title>
 		<link rel="stylesheet" href="/css/syntax-highlighting.css" />
 		<link rel="stylesheet" href="{{ '/css/resets.css' | url }}" />
@@ -13,11 +18,14 @@
 			href="/img/favicon.svg"
 			type="image/x-icon"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&familyWork+Sans:wght@100..900&display=swap" rel="stylesheet">
 		<script
 			src="https://kit.fontawesome.com/85779d05a1.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<script src="/js/darkMode.js" defer></script>
 	</head>
 	<body>
@@ -39,8 +47,11 @@
 								width="auto"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g clip-path="url(#clip0)">
+								<g clip-path="url(#clip0)" width="auto"
+										height="auto">
 									<path
+										width="auto"
+										height="auto"
 										d="M7.37335 35.9332V30.9334L28.5604 18.7326V24.0602L11.7533 33.4625L28.5604 42.9586V48.2862L7.37335 35.9332ZM31.0307 55.7566L40.306 10.6416H43.4492L34.1998 55.7566H31.0307ZM67.0849 35.9332L45.8979 48.2862V42.9586L62.6792 33.4625L45.8979 24.0602V18.7326L67.0849 30.9334V35.9332Z"
 										fill="url(#paint0_linear)"
 									/>
@@ -81,7 +92,7 @@
 						<a href="/resources" class="nav_list__link nav_list__link--resources {% if '/resources/' in page.url %}nav_list__link--resources--active{% endif %}">Resources</a>
 						<a href="/tipsNtricks" class="nav_list__link nav_list__link--tipsntricks {% if '/tipsNtricks/' in page.url %}nav_list__link--tipsntricks--active{% endif %}">tipsNtricks</a>
 						<a href="/contact" class="nav_list__link nav_list__link--contact {% if '/contact/' in page.url %}nav_list__link--contact--active{% endif %}">Contact</a>
-						<a href="javascript:void(0)" class="nav_list__link nav_list__link--search"><i class="fas fa-search"></i></a>
+						{# <a href="javascript:void(0)" class="nav_list__link nav_list__link--search"><i class="fas fa-search"></i></a> #}
 					</li>
 				</ul>
 				<input type="checkbox" class="mobile_nav__toggle" id="mobile_nav__toggle">
@@ -90,7 +101,7 @@
 					<a href="/resources" class="mobile_nav__link mobile_nav__link--resources {% if '/resources/' in page.url %}mobile_nav__link--resources--active{% endif %}">Resources</a>
 					<a href="/tipsNtricks" class="mobile_nav__link mobile_nav__link--tipsntricks {% if '/tipsNtricks/' in page.url %}mobile_nav__link--tipsntricks--active{% endif %}">tipsNtricks</a>
 					<a href="/contact" class="mobile_nav__link mobile_nav__link--contact {% if '/contact/' in page.url %}mobile_nav__link--contact--active{% endif %}">Contact</a>
-					<a href="javascript:void(0)" class="mobile_nav__link mobile_nav__link--search"><i class="fas fa-search"></i></a>
+					{# <a href="javascript:void(0)" class="mobile_nav__link mobile_nav__link--search"><i class="fas fa-search"></i></a> #}
 				</div>
 			</nav>
 			{{content | safe}}
@@ -124,18 +135,5 @@
 			</footer>
 		</div>
 				
-
-
-		<script>
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on("init", user => {
-				if (!user) {
-					window.netlifyIdentity.on("login", () => {
-					document.location.href = "/admin/";
-					});
-				}
-				});
-			}
-		</script>
 	</body>
 </html>

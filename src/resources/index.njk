@@ -17,7 +17,7 @@ css: resources.css
 				<a class="sidebar__link" href="#ytchannels">Youtube Channels</a>
 			</li>
 			<li class="sidebar__item">
-				<a class="sidebar__link" href="#blogs">Blogs</a>
+				<a class="sidebar__link" href="#sites">Sites</a>
 			</li>
 		</ul>
 	</aside>
@@ -50,15 +50,15 @@ css: resources.css
 			</ul>
 		</section>
 
-		<section class="section" id="blogs">
-			<h2 class="section__title">Blogs</h2>
-			<ul class="section__list section__list--blogs">
-				{%- for blog in collections.blog | alpha -%}
+		<section class="section" id="sites">
+			<h2 class="section__title">Sites</h2>
+			<ul class="section__list section__list--sites">
+				{%- for site in collections.site | alpha -%}
 				<li class="section__item">
-					<a class="section__item__link" href="{{ blog.url }}">{{
-						blog.data.title
+					<a class="section__item__link" href="{{ site.url }}">{{
+						site.data.title
 					}}</a>
-					- {{ blog.data.description }}
+					- {{ site.data.description }}
 				</li>
 				{%- endfor -%}
 			</ul>

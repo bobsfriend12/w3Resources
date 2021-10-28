@@ -1,6 +1,6 @@
 {
 	"layout": "post.njk",
 	"css": "post.css",
-	"tags": "post",
+	"tags": ["post", "js"],
 	"author": "bobsfriend12"
 }
